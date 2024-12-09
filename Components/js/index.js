@@ -1,12 +1,12 @@
 (function ($) {
     "use strict";
 
-  
-    // wow js
-    new WOW().init();
+    // Initialize WOW.js
+    document.addEventListener("DOMContentLoaded", function () {
+        new WOW().init();
+    });
 
-
-    // Navbar
+    // Navbar scroll behavior
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('.sticky-top').css('top', '0px');
@@ -14,8 +14,8 @@
             $('.sticky-top').css('top', '-100px');
         }
     });
-        
-    // Back to top btn
+
+    // Back-to-top button functionality
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('.back-to-top').fadeIn('slow');
@@ -23,28 +23,22 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
 
-
-    // carousel
+    // Header carousel
     $(".header-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
         items: 1,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
     });
 
-
-    // second  carousel
+    // Testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -52,19 +46,12 @@
         margin: 24,
         dots: true,
         loop: true,
-        nav : false,
+        nav: false,
         responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
         }
     });
-    
-})(jQuery);
 
+})(jQuery);

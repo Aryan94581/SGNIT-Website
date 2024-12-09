@@ -55,3 +55,26 @@
     });
 
 })(jQuery);
+
+document.getElementById("googleForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get the form data
+    const formData = new FormData(this);
+
+    // Send data to Google Forms
+    fetch(this.action, {
+      method: this.method,
+      body: formData,
+      mode: "no-cors" // Allows submission without CORS restrictions
+    })
+      .then(() => {
+        // Show success message
+        document.getElementById("successMessage").style.display = "block";
+        // Optionally clear the form
+        this.reset();
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  });

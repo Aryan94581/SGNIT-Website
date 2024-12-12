@@ -114,14 +114,14 @@ document.getElementById("customForm").addEventListener("submit", function (event
     const form = event.target;
     const formData = new FormData(form);
 
-    // Send the form data to Google Forms
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSd_c-_0VO08DWc9VPqTl8oPuFVpcibUF0gOz_nXKcZLGBBlkQ/viewform?usp=sharing", {
+    // Correct Google Form submission URL
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSd_c-_0VO08DWc9VPqTl8oPuFVpcibUF0gOz_nXKcZLGBBlkQ/formResponse", {
         method: "POST",
         body: formData,
         mode: "no-cors", // Required to bypass CORS restrictions
     })
         .then(() => {
-            // Assume success even if no response
+            // Assume success since there's no response with no-cors
             document.getElementById("successMessage").style.display = "block";
 
             // Optionally, clear the form

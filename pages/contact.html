@@ -119,70 +119,72 @@
                         tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <form 
-                    action="https://docs.google.com/forms/u/0/d/1q39X4ZUIE0Eu6haq67GovvptP2nS2zLVTH27S9Xxdew/previewResponse"
-                    method="POST" 
-                    target="_blank">
-            
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input 
-                                    type="text" 
-                                    class="form-control" 
-                                    id="name" 
-                                    name="entry.2005620554" 
-                                    placeholder="Enter your name" 
-                                    required>
-                                <label for="Name" class="form-label">Your Name </label>
+                    <form id="customForm">
+                        <div class="row g-3">
+                            <!-- Name Field -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="name" 
+                                        name="entry.2005620554" 
+                                        placeholder="Enter your name" 
+                                        required>
+                                    <label for="name" class="form-label">Your Name</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input 
-                                    type="email" 
-                                    class="form-control" 
-                                    id="email" 
-                                    name="entry.1045781291" 
-                                    placeholder="Enter your email" 
-                                    required>
-                                <label for="email" class="form-label">Your Email</label>
+                    
+                            <!-- Email Field -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input 
+                                        type="email" 
+                                        class="form-control" 
+                                        id="email" 
+                                        name="entry.1045781291" 
+                                        placeholder="Enter your email" 
+                                        required>
+                                    <label for="email" class="form-label">Your Email</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <input 
-                                    type="text" 
-                                    class="form-control" 
-                                    id="subject" 
-                                    name="entry.1166974658" 
-                                    placeholder="Enter the subject" 
-                                    required>
-                                <label for="subject" class="form-label">Subject</label>
+                    
+                            <!-- Subject Field -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="subject" 
+                                        name="entry.1166974658" 
+                                        placeholder="Enter the subject" 
+                                        required>
+                                    <label for="subject" class="form-label">Subject</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea 
-                                    class="form-control" 
-                                    id="message" 
-                                    name="entry.839337160" 
-                                    rows="5" 
-                                    placeholder="Write your message here" 
-                                    required></textarea>
+                    
+                            <!-- Message Field -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea 
+                                        class="form-control" 
+                                        id="message" 
+                                        name="entry.839337160" 
+                                        rows="5" 
+                                        placeholder="Write your message here" 
+                                        required></textarea>
                                     <label for="message" class="form-label">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                             </div>
                         </div>
-                        <div class="col-12">
-                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                        </div>
+                    </form> 
+                    <div id="successMessage" style="display: none; margin-top: 20px;">
+                        <p class="text-success">Your message has been sent successfully!</p>
                     </div>
-                </form>
-                <div id="successMessage" style="display: none; margin-top: 20px;">
-                    <p class="text-success">Your message has been sent successfully!</p>
                 </div>
-            </div>
-            </div>
             </div>
         </div>
     </div>

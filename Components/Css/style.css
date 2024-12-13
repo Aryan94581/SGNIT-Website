@@ -71,6 +71,10 @@
     border-radius: 0px;
 }
 /*** Navbar ***/
+.Logo-heading{
+    font-size: 1rem;
+    font-weight: 600;
+}
 
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
@@ -369,6 +373,16 @@ navbar-light .navbar-brand,
     .navbar-light .navbar-nav {
         border-top: 1px solid #EEEEEE;
     }
+    .Logo-heading{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+@media (min-width: 990px) and (max-width: 1100px) {
+    .Logo-heading{
+        font-size: 0.4rem;
+        font-weight: 600;
+    }
 }
 
 @media (min-width: 992px) {
@@ -378,6 +392,10 @@ navbar-light .navbar-brand,
         opacity: 0;
         visibility: hidden;
         transition: .5s;
+    }
+    .Logo-heading{
+        font-size: 1rem;
+        font-weight: 600;
     }
 
     .navbar .dropdown-menu.fade-down {
@@ -414,5 +432,9 @@ navbar-light .navbar-brand,
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
+    }
+    .Logo-heading{
+        font-size: 0.6rem;
+        font-weight: 600;
     }
 }
